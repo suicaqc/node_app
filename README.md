@@ -1,3 +1,3 @@
-# node_app
+# node_app is an experimentation with servers and git to create a photo website.
 
-#This is an experimentation with servers and git
+To see the html front-end please refer to index.html
