@@ -1,7 +1,12 @@
+
+res.send('test');
+
+
+
 var fs = require('fs');
 var re = new RegExp("^(.+)\.(jpg|jpeg|gif|png)$");
 var names = [];
-
+/*
 fs.readdir(__dirname, function(err, files) {
     if (err) return;
     files.forEach(function(f) { 
@@ -9,5 +14,6 @@ fs.readdir(__dirname, function(err, files) {
         	names[names.length] = f
         }
     });
-    res.send(names)
+    res.send(test)
 });
+*/
