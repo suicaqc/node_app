@@ -10,5 +10,5 @@ fs.readdir(__dirname, function(err, files) {
         }
     });
 
-    res.send(test)
+    res.send(names)
 });
