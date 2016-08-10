@@ -2,7 +2,7 @@ var fs = require('fs');
 var re = new RegExp("^(.+)\.(jpg|jpeg|gif|png)$");
 var names = [];
 
-res.send(__dirname)
+res.send(env)
 /*
 fs.readdir(__dirname, function(err, files) {
     if (err) res.send(err);
