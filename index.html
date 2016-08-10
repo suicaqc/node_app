@@ -11,7 +11,12 @@
 			$.ajax({
     				url: "/api/test.js",
     				success: function (data) { 
-    				console.log(data)
+    				console.log(data);
+    				var str = "";
+    				for(var i = 0; i < data.length; i++){
+    					str += data[i] + "<br>";
+    				}
+    				$("#images").html(str);
 						    	/*
 						        $(data).find("a:contains(" + fileextension + ")").each(function () {
 						            	var filename = this.href.replace(window.location.host, "").replace("http://", "");
@@ -27,10 +32,7 @@
 
 <body>
 <h1>Picture Repository</h1>
-	<table>
-	<img src="images/IMG_0455.jpg" alt="Profile Picture" width="500" valign="Top"></img>
-<img src="images/IMG_0454.jpg" alt="Other Picture" width="500">
-</table>
+	<div id="images"></div>
 </body>
 
 </html>
