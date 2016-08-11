@@ -17,7 +17,7 @@
 		var fileextension = ".jpg";
 
 		var placeImage = function (v) {
-			$('#imagesection').html('<img src="/images/' + v + '" width= "1000">');
+			$('#imagesection').html('<img src="/photos/' + v + '" width= "1000">');
 		}
 
 		$(document).ready(function() {
@@ -28,14 +28,10 @@
     				//var img_str = "";
     				var list_str = "";
     				for(var i = 0; i < data.length; i++){
-    					//img_str += '<img src="/images/' + data[i] + '" alt = '+ data[i] + '"> <br>';
     					list_str += '<li><a href="JavaScript:void(0)" ' 
-    					+ 'onMouseOver="placeImage(\''  + data[i] + '\')"><span class="glyphicon glyphicon-picture"></span></a></li>';
-
-    					//images/' + data[i] + '">' + data[i] + '</a></li>'
+    					+ 'onMouseOver="placeImage(\''  + data[i] + '\')"><img src="/images/icon-image-128.png"></a></li>';
 
     				}
-    				//$("#images").html(img_str);
     				$("#myList").html(list_str);
 				    			}
 							});
