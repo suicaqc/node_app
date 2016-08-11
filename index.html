@@ -12,27 +12,50 @@
     				url: "/api/test.js",
     				success: function (data) { 
     				console.log(data);
-    				var str = "";
+    				//var img_str = "";
+    				var list_str = "";
     				for(var i = 0; i < data.length; i++){
-    					str += '<img src="/images/' + data[i] + '" alt = '+ data[i] + '"> <br>';
+    					//img_str += '<img src="/images/' + data[i] + '" alt = '+ data[i] + '"> <br>';
+    					list_str += '<li><a href="/images/' + data[i] + '">' + data[i] + '</a></li>'
+
     				}
-    				$("#images").html(str);
-						    	/*
-						        $(data).find("a:contains(" + fileextension + ")").each(function () {
-						            	var filename = this.href.replace(window.location.host, "").replace("http://", "");
-						            	$("body").append("<img src='" + dir + filename + "'>");
-						            	
-						        	}); */
+    				//$("#images").html(img_str);
+    				$("#myList").html(list_str);
 				    			}
 							});
 		})
 		
 	</script>
+	<style type="text/css">
+		ul {
+		    list-style-type: none;
+		    margin: 0;
+		    padding: 0;
+		    width: 200px;
+		    background-color: #f1f1f1;
+			}
+
+		li a {
+		    display: block;
+		    color: #000;
+		    padding: 8px 16px;
+		    text-decoration: none;
+			}
+
+		/* Change the link color on hover */
+		li a:hover {
+		    background-color: #555;
+		    color: white;
+
+	</style>
 </head>
 
 <body>
 <h1>Picture Repository</h1>
-	<div id="images"></div>
+	<ul id="myTopnav">
+  		<div id = "myList"></div>
+	</ul>
+	<!--div id="images"></div-->
 </body>
 
 </html>
