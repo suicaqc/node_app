@@ -1,4 +1,4 @@
-var Jimp = require("./package_jimp/node_modules/jimp");
+var Jimp = require("/var/node_app_server/_microservice/photoserver/api/package_jimp/node_modules/jimp");
 
 console.log("test1");
 res.send('test1');
