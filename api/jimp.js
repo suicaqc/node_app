@@ -11,7 +11,7 @@ var lenna = new Jimp("/var/node_app_server/_microservice/photoserver/photos/IMG_
         		res.send('test2');
         	}
         	
-        }(res)); // save
+        })(res)); // save
 });
 
 
