@@ -8,8 +8,8 @@ var   url = req.query.url,
                   if (err) {
                        res.send(err.message);  
                   } else {
-                  		var width = image.bitmap.width;
-                  		var height = image.bitmap.height;
+                  		//var width = image.bitmap.width;
+                  		//var height = image.bitmap.height;
                   		res.send('width'+'height');
 
                   		return true;
