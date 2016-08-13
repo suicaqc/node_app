@@ -8,7 +8,9 @@ var   url = req.query.url,
                   if (err) {
                        res.send(err.message);  
                   } else {
-                  		res.send(image);
+                  		var width = image.bitmap.width;
+                  		var height = image.bitmap.height;
+                  		res.send(width + height);
 
                   		return true;
                         image.resize(x, y).
