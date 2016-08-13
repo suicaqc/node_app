@@ -5,6 +5,8 @@ var   url = req.query.url,
   if (url) {
       var Jimp = require(env.space_path + 'package_jimp/node_modules/jimp');
       Jimp.read(url, function (err, image) {
+      				res.send(image);
+      				return true;
                   if (err) {
                        res.send(err.message);  
                   } else {
@@ -19,3 +21,5 @@ var   url = req.query.url,
   } else {
         res.send(req.params[0] + ' is wrong format '); 
   }
+
+
