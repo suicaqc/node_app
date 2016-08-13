@@ -8,9 +8,12 @@ var   url = req.query.url,
                   if (err) {
                        res.send(err.message);  
                   } else {
+                  		res.send(image);
+
+                  		return true;
                         image.resize(x, y).
                         getBuffer(Jimp.MIME_JPEG,function(err,buffer){
-                        			res.send(buffer);
+
                                     res.end(buffer);
             
                         });  
