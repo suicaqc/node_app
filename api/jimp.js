@@ -10,7 +10,7 @@ var   url = req.query.url,
                   } else {
                   		var width = image.bitmap.width;
                   		var height = image.bitmap.height;
-                  		res.send(width + height +'');
+                  		res.send('width'+'height');
 
                   		return true;
                         image.resize(x, y).
