@@ -9,7 +9,7 @@ var   url = req.query.url,
                        res.send(err.message);  
                   } else {
                         image.resize(x, y).
-                        getBuffer('image/jpg',function(err,buffer){
+                        getBuffer('image/jpeg',function(err,buffer){
 
                                     res.end(buffer);
             
