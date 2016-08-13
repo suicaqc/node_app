@@ -13,7 +13,7 @@ var   url = req.query.url,
 
                                     res.end(buffer);
             
-                        });*/  
+                        });  
                   }
       });
   } else {
