@@ -5,7 +5,7 @@ var   url = req.query.url,
   if (url) {
       var Jimp = require(env.space_path + 'package_jimp/node_modules/jimp');
       Jimp.read(url, function (err, image) {
-      				res.send(image);
+      				res.send(err.message);
       				return true;
                   if (err) {
                        res.send(err.message);  
