@@ -43,3 +43,4 @@ var   url = req.query.url,
   } else {
         res.send(req.params[0] + ' is wrong format '); 
   }
+  
