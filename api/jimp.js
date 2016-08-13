@@ -1,17 +1,20 @@
-var Jimp = require("/var/node_app_server/_microservice/photoserver/api/package_jimp/node_modules/jimp");
+var   url = req.query.url, 
+      x = (isNaN(req.query.x) || !req.query.x)?100:parseInt(req.query.x), 
+      y = (isNaN(req.query.y) || !req.query.y)?100:parseInt(req.query.y);
 
-console.log("test1");
-//res.send('test1');
-
-var lenna = new Jimp("/var/node_app_server/_microservice/photoserver/photos/IMG_0454.jpg", function () {
-    this.resize(180, 180) // resize
-        .write("mini.png", (function(res) {
-        	return function() {
-
-        		res.send('test2');
-        	}
-        	
-        })(res)); // save
-});
-
-
+  if (url) {
+      var Jimp = require(env.space_path + '/api/package_jimp/node_modules/jimp');
+      Jimp.read(url, function (err, image) {
+                  if (err) {
+                       res.send(err.message);  
+                  } else {
+                        image.resize(x, y).
+                        getBuffer(Jimp.MIME_JPEG,function(err,buffer){
+                                    res.end(buffer);
+            
+                        });  
+                  }
+      });
+  } else {
+        res.send(req.params[0] + ' is wrong format '); 
+  }
