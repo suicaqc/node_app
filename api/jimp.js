@@ -8,11 +8,16 @@ var   url = req.query.url,
                   if (err) {
                        res.send(err.message);  
                   } else {
-                        image.resize(x, y).
+                        image.resize(x, y, function(img) {
+                        	res.send(img);
+                        })
+                        /*
+                        .
                         getBuffer(Jimp.MIME_JPEG,function(err,buffer){
+
                                     res.end(buffer);
             
-                        });  
+                        });*/  
                   }
       });
   } else {
