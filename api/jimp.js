@@ -3,7 +3,7 @@ var   url = req.query.url,
       y = (isNaN(req.query.y) || !req.query.y)?180:parseInt(req.query.y);
 
   if (url) {
-      var Jimp = require(env.space_path + 'package_jimp/node_modules/jimp');
+      var Jimp = require(env.space_path + '/package_jimp/node_modules/jimp');
       Jimp.read(url, function (err, image) {
                   if (err) {
                        res.send(err.message);  
