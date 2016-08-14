@@ -28,8 +28,8 @@
     				//var img_str = "";
     				var list_str = "";
     				for(var i = 0; i < data.length; i++){
-    					list_str += '<li><a href="JavaScript:void(0)" ' 
-    					+ 'onClick="placeImage(\''  + data[i] + '\')"><img src="http://shusiou.com/api/jimp.js?url=http://shusiou.com/photos/' + data[i] + '" ></a></li>';
+    					list_str += '<a href="JavaScript:void(0)" ' 
+    					+ 'onClick="placeImage(\''  + data[i] + '\')"><img src="http://shusiou.com/api/jimp.js?url=http://shusiou.com/photos/' + data[i] + '" ></a>';
     				}
     				$("#myList").html(list_str);
 				    			}
@@ -63,17 +63,8 @@
 
 <body>
 <h1 style="text-align: center">Picture Gallery</h1>
-<div class="col">
-  <div class="col-md-12">
-  	<ul id="myTopnav">
-  		<div id = "myList"></div>
-	</ul>
-	</div>
-  <div class="col-md-12">
-  	<div id="imagesection"></div>
-  </div>
-</div>
-	
+<div id="imagesection"></div>
+<div id="muList"></div>
 </body>
 
 </html>
