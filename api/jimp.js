@@ -13,7 +13,7 @@ var   url = req.query.url,
       	   	res.writeHead(200, {'Content-Type': 'image/gif' });	
       	      res.end(new Buffer(docs[0].img,'base64'));
       	} else {	    		
-                  var Jimp = require(env.space_path + '/package_jimp/node_modules/jimp');
+                  var Jimp = require(env.space_path + '/api/package_jimp/node_modules/jimp');
                   Jimp.read(url, function (err, image) {
                               if (err) {
                                    res.send(err.message);  
