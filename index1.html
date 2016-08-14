@@ -15,9 +15,10 @@
 	<script type="text/javascript">
 		var dir = "/images/";
 		var fileextension = ".jpg";
+		var width = screen.width;
 
 		var placeImage = function (v) {
-			$('#imagesection').html('<img src="/photos/' + v + '" width= "1000">');
+			$('#imagesection').html('<img src="/photos/' + v + '" width = "'+ width + '">');
 		}
 
 		$(document).ready(function() {
