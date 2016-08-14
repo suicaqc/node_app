@@ -20,7 +20,7 @@ var   url = req.query.url,
                               } else {
                                     // image.scaleToFit(x, y)
                                     //image.contain(x,y, Jimp.HORIZONTAL_ALIGN_CENTER | Jimp.VERTICAL_ALIGN_MIDDLE).background(0X00000000).
-                                    image.autocrop().
+                                    image.resize(100,100).
                                     getBuffer(Jimp.MIME_JPEG,function(err,buffer){
                                           var rec = { 
                                                 source: url+'_' + x + '_' + y,
