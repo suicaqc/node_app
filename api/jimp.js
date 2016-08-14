@@ -7,7 +7,6 @@ var   url = req.query.url,
       force = req.query.force;
 
   if (url) {
-<<<<<<< HEAD
      pkg.db.photo_cache.find({ source: url+'_' + x + '_' + y}, function (err, docs) {
       	if ((docs[0]) && !force) {
       		// res.send(docs[0].img);
@@ -40,14 +39,8 @@ var   url = req.query.url,
         });        
         
         
-=======
-      var Jimp = require(env.space_path + '/package_jimp/node_modules/jimp');
-      Jimp.read(url, function (err, image) {
-                  if (err) {
-                       res.send(err.message);  
-                  } else {
->>>>>>> origin/master
 
   } else {
         res.send(req.params[0] + ' is wrong format '); 
+  }
   }
