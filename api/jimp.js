@@ -19,7 +19,8 @@ var   url = req.query.url,
                                    res.send(err.message);  
                               } else {
                                     // image.scaleToFit(x, y)
-                                    image.contain(x,y, Jimp.HORIZONTAL_ALIGN_CENTER | Jimp.VERTICAL_ALIGN_MIDDLE).background(0X00000000).
+                                    //image.contain(x,y, Jimp.HORIZONTAL_ALIGN_CENTER | Jimp.VERTICAL_ALIGN_MIDDLE).background(0X00000000).
+                                    image.autocrop().
                                     getBuffer(Jimp.MIME_JPEG,function(err,buffer){
                                           var rec = { 
                                                 source: url+'_' + x + '_' + y,
