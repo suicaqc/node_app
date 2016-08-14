@@ -1,3 +1,5 @@
+res.send(env);
+
 var fs = require('fs');
 var re = new RegExp("^(.+)\.(jpg|jpeg|gif|png)$");
 var names = [];
