@@ -29,7 +29,7 @@
     				var list_str = "";
     				for(var i = 0; i < data.length; i++){
     					list_str += '<li><a href="JavaScript:void(0)" ' 
-    					+ 'onClick="placeImage(\''  + data[i] + '\')"><img src="http://shusiou.com/api/jimp.js?url=http://shusiou.com/photos/' + data[i] + '" ></a></li>';
+    					+ 'onClick="placeImage(\''  + data[i] + '\')"><img src="http://shusiou.com/api/jimp.js?url=' + data[i] + '" ></a></li>';
     				}
     				$("#myList").html(list_str);
 				    			}
