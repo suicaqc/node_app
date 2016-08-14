@@ -1,10 +1,10 @@
-res.send(env);
+//res.send(env);
 
 var fs = require('fs');
 var re = new RegExp("^(.+)\.(jpg|jpeg|gif|png)$");
 var names = [];
 
-var folder_name = (env.space_path).replace('api/', 'photos');
+var folder_name = env.space_path + 'photos';
 
 fs.readdir(folder_name, function(err, files) {
     if (err) res.send(err);
