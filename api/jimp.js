@@ -14,7 +14,7 @@ var   url = req.query.url,
       	      res.end(new Buffer(docs[0].img,'base64'));
       	} else {	    		
                   var Jimp = require(env.space_path + '/api/package_jimp/node_modules/jimp');
-                  Jimp.read(url, function (err, image) {
+                  Jimp.read(env.space_path + "/pictures/" + url, function (err, image) {
                               if (err) {
                                    res.send(err.message);  
                               } else {
